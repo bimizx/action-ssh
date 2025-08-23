@@ -5,14 +5,14 @@ on:
 
 jobs:
   ssh-debug:
-    runs-on: macos-15
+    runs-on: ubuntu-22.04
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v3
+      uses: actions/checkout@main
 
     - name: Start SSH session with tmate
-      uses: mxschmitt/action-tmate@v3
+      uses: mxschmitt/action-tmate@master
 
     - name: Keep session alive
       run: |
